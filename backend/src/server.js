@@ -57,12 +57,17 @@ app.use((err, req, res, next) => {
 });
 
 // Start Server
-const server = app.listen(env.port, () => {
-  console.log(`\n==================================================`);
-  console.log(`🚀 Backend running at: http://localhost:${env.port}`);
-  console.log(`🛒 Target Mock Store:  ${env.mockStoreUrl}`);
-  console.log(`🛡️  Cron Auth Endpoint: http://localhost:${env.port}/api/jobs/scrape-all`);
-  console.log(`==================================================\n`);
-});
+// Start Server
+const server = app.listen(
+  env.port,
+  '0.0.0.0',
+  () => {
+    console.log(`\n==================================================`);
+    console.log(`🚀 Backend running on port: ${env.port}`);
+    console.log(`🛒 Target Mock Store: ${env.mockStoreUrl}`);
+    console.log(`🛡️  Cron Auth Endpoint: /api/jobs/scrape-all`);
+    console.log(`==================================================\n`);
+  }
+);
 
 module.exports = { app, server };
