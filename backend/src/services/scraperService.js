@@ -396,7 +396,7 @@ class ScraperService {
 
         // Keep headed false by default.
         // For debugging you can pass { headed: true }.
-        const isHeaded = true;
+        const isHeaded = options.headed === true;
 
         console.log('');
         console.log(

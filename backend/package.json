@@ -1,3 +1,4 @@
+
 {
   "name": "ine-price-tracker-backend",
   "version": "1.0.0",
@@ -6,7 +7,8 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
-    "scrape:headed": "node src/scripts/headedScrape.js"
+    "scrape:headed": "node src/scripts/headedScrape.js",
+    "scrape:scheduled": "node src/scripts/scheduledScrape.js"
   },
   "keywords": [
     "price-tracker",
